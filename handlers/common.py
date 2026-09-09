@@ -33,7 +33,7 @@ def build_menu_text() -> str:
 
 @router.message(CommandStart())
 async def cmd_start(message: Message, state: FSMContext) -> None:
-    # На случай, если пользователь запускает /start посреди FSM-диалога.
+   
     await state.clear()
     await message.answer(
         "Привет! Я бот кафе ☕\n"
