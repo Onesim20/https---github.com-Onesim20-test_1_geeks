@@ -6,7 +6,7 @@ DB_PATH = Path(__file__).parent / "cafe.db"
 
 
 def init_db() -> None:
-    """Создаёт таблицу drinks, если она ещё не существует."""
+
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
             """
@@ -21,7 +21,7 @@ def init_db() -> None:
 
 
 def add_drink(name: str, price: int) -> None:
-    """Добавляет новый напиток в базу данных."""
+
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
             "INSERT INTO drinks (name, price) VALUES (?, ?)",
