@@ -13,7 +13,7 @@ router = Router()
 
 @router.message(Command("cancel"), StateFilter(AddDrink.name, AddDrink.price))
 async def cmd_cancel(message: Message, state: FSMContext) -> None:
-    """Доп. команда: позволяет прервать диалог добавления напитка."""
+
     await state.clear()
     await message.answer("Добавление напитка отменено.")
 
