@@ -14,7 +14,6 @@ from handlers.fsm import router as fsm_router
 
 
 async def set_bot_commands(bot: Bot) -> None:
-    """Регистрирует команды в системном меню Telegram (кнопка "Menu")."""
     await bot.set_my_commands(
         [BotCommand(command=cmd, description=desc) for cmd, desc in COMMANDS]
     )
